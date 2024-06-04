@@ -36,7 +36,7 @@
     </ol>
 
     <h2>3.3 Ant Design List</h2>
-    <a-list size="small" bordered :data-source="data">
+    <a-list size="small" bordered :data-source="date">
       <a-list-item>item 1</a-list-item>
       <a-list-item>item 2</a-list-item>
     </a-list>
@@ -90,15 +90,14 @@
   <h2>5.1 Standart HTML</h2>
   <input type="range" />
 
-  <h2>5.2 Primevue Slider</h2>
+  <h2>5.2 Ant Design Slider</h2>
   <section>
-    <Slider v-model="value" :step="20" />
+    <a-slider id="test" v-model:value="value"  :step="10"/>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { theme } from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 
 const msg = ref('');
@@ -106,7 +105,7 @@ const date = ref('');
 const value = ref(10);
 </script>
 
-<style scoped>
+<style>
 input[type='range'] {
   width: 100%;
 }
